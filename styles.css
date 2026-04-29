@@ -1,0 +1,20 @@
+body {
+  background: #f8fafc;
+}
+
+.navbar-brand {
+  letter-spacing: 0.02em;
+}
+
+footer a,
+footer a:hover {
+  text-decoration: none;
+}
+
+.hero-banner {
+  min-height: 72vh;
+}
+
+.sticky-summary {
+  top: 1.5rem;
+}

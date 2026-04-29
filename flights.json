@@ -1,0 +1,100 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "airline": "MLM Flights Airlines",
+      "departure": "New York (JFK)",
+      "arrival": "Los Angeles (LAX)",
+      "departureTime": "08:00 AM",
+      "arrivalTime": "11:30 AM",
+      "duration": "5h 30m",
+      "price": 250,
+      "seats": 12,
+      "date": "2026-05-01"
+    },
+    {
+      "id": 2,
+      "airline": "United Airlines",
+      "departure": "New York (JFK)",
+      "arrival": "Los Angeles (LAX)",
+      "departureTime": "02:30 PM",
+      "arrivalTime": "06:00 PM",
+      "duration": "5h 30m",
+      "price": 320,
+      "seats": 8,
+      "date": "2026-05-01"
+    },
+    {
+      "id": 3,
+      "airline": "Delta Airlines",
+      "departure": "New York (JFK)",
+      "arrival": "Los Angeles (LAX)",
+      "departureTime": "05:00 PM",
+      "arrivalTime": "08:30 PM",
+      "duration": "5h 30m",
+      "price": 280,
+      "seats": 15,
+      "date": "2026-05-01"
+    },
+    {
+      "id": 4,
+      "airline": "American Airlines",
+      "departure": "New York (JFK)",
+      "arrival": "Los Angeles (LAX)",
+      "departureTime": "10:15 AM",
+      "arrivalTime": "01:45 PM",
+      "duration": "5h 30m",
+      "price": 290,
+      "seats": 5,
+      "date": "2026-05-01"
+    },
+    {
+      "id": 5,
+      "airline": "MLM Flights Airlines",
+      "departure": "New York (JFK)",
+      "arrival": "Chicago (ORD)",
+      "departureTime": "12:00 PM",
+      "arrivalTime": "02:15 PM",
+      "duration": "2h 15m",
+      "price": 150,
+      "seats": 20,
+      "date": "2026-05-02"
+    },
+    {
+      "id": 6,
+      "airline": "United Airlines",
+      "departure": "New York (JFK)",
+      "arrival": "Chicago (ORD)",
+      "departureTime": "03:45 PM",
+      "arrivalTime": "06:00 PM",
+      "duration": "2h 15m",
+      "price": 160,
+      "seats": 10,
+      "date": "2026-05-02"
+    },
+    {
+      "id": 7,
+      "airline": "Delta Airlines",
+      "departure": "Los Angeles (LAX)",
+      "arrival": "Miami (MIA)",
+      "departureTime": "07:00 AM",
+      "arrivalTime": "02:30 PM",
+      "duration": "4h 30m",
+      "price": 200,
+      "seats": 18,
+      "date": "2026-05-03"
+    },
+    {
+      "id": 8,
+      "airline": "American Airlines",
+      "departure": "Los Angeles (LAX)",
+      "arrival": "Miami (MIA)",
+      "departureTime": "04:30 PM",
+      "arrivalTime": "12:00 AM",
+      "duration": "4h 30m",
+      "price": 220,
+      "seats": 7,
+      "date": "2026-05-03"
+    }
+  ]
+}

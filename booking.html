@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking - MLM Flights</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">✈️ MLM Flights</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search.html">Search Flights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-light border-bottom">
+      <div class="container py-4 py-lg-5">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-4 p-lg-5">
+            <div
+              class="d-flex flex-column flex-lg-row justify-content-between gap-3"
+            >
+              <div>
+                <span class="badge text-bg-primary rounded-pill mb-2"
+                  >Checkout</span
+                >
+                <h1 class="display-6 fw-bold mb-2">Complete your booking</h1>
+                <p class="text-secondary mb-0">
+                  Review the flight details and finish the payment step.
+                </p>
+              </div>
+              <div class="text-lg-end">
+                <div class="text-secondary small text-uppercase fw-semibold">
+                  Flight details
+                </div>
+                <div class="fw-bold fs-5" id="bookingFlightInfo">
+                  Loading...
+                </div>
+                <div class="text-secondary">
+                  Departure: <span id="bookingDeparture">-</span> · Arrival:
+                  <span id="bookingArrival">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="card-body p-4 p-lg-5">
+                <h2 class="h4 fw-bold mb-4">Passenger information</h2>
+
+                <div class="bg-light rounded-4 p-4 mb-4">
+                  <div class="fw-bold text-primary mb-3">Passenger 1</div>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label fw-semibold">First Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        placeholder="John"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-semibold">Last Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        placeholder="Doe"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-semibold">Email *</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="john@example.com"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-semibold">Phone *</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        placeholder="+1 (555) 000-0000"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="h5 fw-bold mb-3">Payment method</h3>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold"
+                      >Card Holder Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cardholderName"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold">Card Number *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cardNumber"
+                      placeholder="1234 5678 9012 3456"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label fw-semibold">Expiry Date *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="expiryDate"
+                      placeholder="MM/YY"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label fw-semibold">CVV *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cvv"
+                      placeholder="123"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold"
+                      >Billing Address *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="billingAddress"
+                      placeholder="123 Main St"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="alert alert-light border rounded-4 mb-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="termsCheck"
+                      required
+                    />
+                    <label class="form-check-label" for="termsCheck"
+                      >I agree to the terms and conditions and privacy
+                      policy</label
+                    >
+                  </div>
+                </div>
+
+                <button
+                  class="btn btn-primary btn-lg w-100"
+                  onclick="completeBooking()"
+                >
+                  Complete booking
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-4 sticky-summary">
+              <div class="card-body p-4">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
+                  <h2 class="h5 fw-bold mb-0">Order summary</h2>
+                  <span class="badge text-bg-primary rounded-pill">Secure</span>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                  <div
+                    class="list-group-item d-flex justify-content-between px-0"
+                  >
+                    <span class="text-secondary">Flight</span
+                    ><strong id="summaryFlightInfo">Loading...</strong>
+                  </div>
+                  <div
+                    class="list-group-item d-flex justify-content-between px-0"
+                  >
+                    <span class="text-secondary">Departure</span
+                    ><strong id="summaryDepartureTime">-</strong>
+                  </div>
+                  <div
+                    class="list-group-item d-flex justify-content-between px-0"
+                  >
+                    <span class="text-secondary">Passengers</span
+                    ><strong>1</strong>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center border-top pt-3"
+                >
+                  <span class="fw-semibold text-secondary">Total</span>
+                  <span class="fs-2 fw-bold text-primary"
+                    >$<span id="summaryTotalPrice">0</span></span
+                  >
+                </div>
+                <p class="small text-secondary text-center mt-3 mb-0">
+                  Taxes and fees included
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white-50 pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <h5 class="text-white fw-bold">MLM Flights</h5>
+            <p class="small mb-0">Your trusted flight reservation partner.</p>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Quick Links</h6>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a class="text-white-50" href="index.html">Home</a></li>
+              <li>
+                <a class="text-white-50" href="search.html">Search Flights</a>
+              </li>
+              <li><a class="text-white-50" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Support</h6>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li>
+                <a class="text-white-50" href="contact.html">Help Center</a>
+              </li>
+              <li><a class="text-white-50" href="contact.html">FAQ</a></li>
+              <li>
+                <a class="text-white-50" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Follow Us</h6>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="text-white-50" href="#">Facebook</a>
+              <a class="text-white-50" href="#">Twitter</a>
+              <a class="text-white-50" href="#">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary my-4" />
+        <p class="small text-center mb-0">
+          &copy; 2026 MLM Flights Airlines. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow rounded-4 overflow-hidden">
+          <div class="modal-header bg-primary bg-gradient text-white border-0">
+            <h5 class="modal-title">Booking confirmed</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center p-5">
+            <div class="display-3 mb-3">✓</div>
+            <p class="fs-5 fw-bold mb-2">Your booking has been confirmed!</p>
+            <p class="text-secondary mb-3">
+              Your reservation confirmation has been sent to your email.
+            </p>
+            <p class="text-secondary mb-4">
+              Confirmation #:
+              <span id="confirmationNumber" class="fw-bold text-dark">-</span>
+            </p>
+            <a href="index.html" class="btn btn-primary btn-lg">Back to home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      window.addEventListener("load", loadBookingDetails)
+    </script>
+  </body>
+</html>

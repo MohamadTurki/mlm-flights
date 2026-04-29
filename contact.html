@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - MLM Flights</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <link rel="stylesheet" href="styles.css" />
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">✈️ MLM Flights</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search.html">Search Flights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-primary bg-gradient text-white py-5">
+      <div class="container py-4 text-center">
+        <span
+          class="badge text-bg-light text-primary rounded-pill mb-3 px-3 py-2"
+          >Support</span
+        >
+        <h1 class="display-6 fw-bold mb-2">Get in touch</h1>
+        <p class="lead mb-0 text-white-50">
+          We are here to help with bookings, questions, and travel support.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+              <div class="card-body p-4">
+                <div class="fs-1 mb-3">📧</div>
+                <h2 class="h5 fw-bold">Email</h2>
+                <p class="mb-0 text-secondary">
+                  <a
+                    class="link-primary text-decoration-none"
+                    href="mailto:support@mlmflights.com"
+                    >support@mlmflights.com</a
+                  ><br /><a
+                    class="link-primary text-decoration-none"
+                    href="mailto:info@mlmflights.com"
+                    >info@mlmflights.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+              <div class="card-body p-4">
+                <div class="fs-1 mb-3">📱</div>
+                <h2 class="h5 fw-bold">Phone</h2>
+                <p class="mb-1 text-secondary">+1 (555) 123-4567</p>
+                <p class="small text-secondary mb-0">Mon-Fri, 9AM-6PM EST</p>
+              </div>
+            </div>
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+              <div class="card-body p-4">
+                <div class="fs-1 mb-3">📍</div>
+                <h2 class="h5 fw-bold">Address</h2>
+                <p class="mb-0 text-secondary">
+                  123 Sky Avenue<br />Flight City, FC 12345<br />United States
+                </p>
+              </div>
+            </div>
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <div class="fs-1 mb-3">⏰</div>
+                <h2 class="h5 fw-bold">Business hours</h2>
+                <p class="mb-0 text-secondary">
+                  Mon-Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM<br />Sun:
+                  Closed
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="card-body p-4 p-lg-5">
+                <h2 class="h4 fw-bold mb-4">Send us a message</h2>
+                <form onsubmit="sendMessage(event)">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label class="form-label fw-semibold">First Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contactFirstName"
+                        placeholder="John"
+                        required
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label fw-semibold">Last Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contactLastName"
+                        placeholder="Doe"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label fw-semibold">Email *</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="contactEmail"
+                        placeholder="john@example.com"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label fw-semibold">Subject *</label>
+                      <select class="form-select" id="contactSubject" required>
+                        <option value="">Select a subject</option>
+                        <option value="Booking Issue">Booking Issue</option>
+                        <option value="Flight Information">
+                          Flight Information
+                        </option>
+                        <option value="Payment Question">
+                          Payment Question
+                        </option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label fw-semibold">Message *</label>
+                      <textarea
+                        class="form-control"
+                        id="contactMessage"
+                        rows="5"
+                        placeholder="Tell us how we can help..."
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="contactTerms"
+                          required
+                        />
+                        <label class="form-check-label" for="contactTerms"
+                          >I agree to be contacted regarding my inquiry</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-lg w-100"
+                      >
+                        Send message
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div
+                  id="contactSuccess"
+                  class="alert alert-success d-none mt-4 mb-0"
+                >
+                  <strong>✓ Message sent!</strong> Thank you! We'll respond
+                  within 24 hours.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold display-6 mb-2">Frequently asked questions</h2>
+          <p class="text-secondary mb-0">
+            Quick answers to common support questions.
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="accordion shadow-sm rounded-4 overflow-hidden"
+              id="faqAccordion"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    How can I modify or cancel my booking?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    You can modify or cancel your booking by visiting your
+                    account or contacting support with your confirmation number.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    What payment methods do you accept?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    We accept all major credit cards, PayPal, and digital
+                    wallets. All transactions are secure and encrypted.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    Is my personal information secure?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes. We use SSL encryption and protect your data with modern
+                    security practices.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    Can I book flights for a group?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    For group bookings, contact our support team and we will
+                    help you arrange special rates.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                  >
+                    What if my flight is delayed or cancelled?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    We notify you immediately and help you rebook on the next
+                    available flight at no extra charge.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white-50 pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <h5 class="text-white fw-bold">MLM Flights</h5>
+            <p class="small mb-0">Your trusted flight reservation partner.</p>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Quick Links</h6>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a class="text-white-50" href="index.html">Home</a></li>
+              <li>
+                <a class="text-white-50" href="search.html">Search Flights</a>
+              </li>
+              <li><a class="text-white-50" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Support</h6>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li>
+                <a class="text-white-50" href="contact.html">Help Center</a>
+              </li>
+              <li><a class="text-white-50" href="contact.html">FAQ</a></li>
+              <li>
+                <a class="text-white-50" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Follow Us</h6>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="text-white-50" href="#">Facebook</a>
+              <a class="text-white-50" href="#">Twitter</a>
+              <a class="text-white-50" href="#">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary my-4" />
+        <p class="small text-center mb-0">
+          &copy; 2026 MLM Flights Airlines. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function sendMessage(event) {
+        event.preventDefault()
+
+        const firstName = document
+          .getElementById("contactFirstName")
+          .value.trim()
+        const lastName = document.getElementById("contactLastName").value.trim()
+        const email = document.getElementById("contactEmail").value.trim()
+        const subject = document.getElementById("contactSubject").value
+        const message = document.getElementById("contactMessage").value.trim()
+        const terms = document.getElementById("contactTerms").checked
+
+        if (!firstName || !lastName || !email || !subject || !message) {
+          alert("Please fill in all required fields")
+          return
+        }
+
+        if (!terms) {
+          alert("Please agree to be contacted")
+          return
+        }
+
+        const successDiv = document.getElementById("contactSuccess")
+        successDiv.classList.remove("d-none")
+
+        document.querySelector("form").reset()
+
+        setTimeout(() => {
+          successDiv.classList.add("d-none")
+        }, 5000)
+      }
+    </script>
+  </body>
+</html>

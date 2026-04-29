@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Flights - MLM Flights</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">✈️ MLM Flights</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="search.html"
+                >Search Flights</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-primary bg-gradient text-white py-5">
+      <div class="container py-4">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <span
+              class="badge text-bg-light text-primary rounded-pill mb-3 px-3 py-2"
+              >Search smarter</span
+            >
+            <h1 class="display-6 fw-bold mb-3">Find your flight</h1>
+            <p class="lead mb-0 text-white-50">
+              Choose your route and see the best options in a clean, modern
+              layout.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="card border-0 shadow-sm rounded-4 mb-4">
+          <div class="card-body p-4 p-lg-5">
+            <h2 class="h4 fw-bold mb-4">Search flights</h2>
+            <div class="row g-3 align-items-end">
+              <div class="col-md-3">
+                <label class="form-label fw-semibold">From</label>
+                <select class="form-select" id="fromCity" required>
+                  <option value="">Select departure city</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label fw-semibold">To</label>
+                <select class="form-select" id="toCity" required>
+                  <option value="">Select arrival city</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label fw-semibold">Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="travelDate"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <button
+                  class="btn btn-warning btn-lg fw-semibold w-100"
+                  onclick="performSearch()"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div id="resultsContainer">
+              <div
+                class="alert alert-info border-0 shadow-sm rounded-4 text-center mb-0 py-4"
+              >
+                Enter your travel details and search to see available flights.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div
+              class="card border-0 shadow-sm rounded-4 sticky-summary"
+              id="bookingSummary"
+              style="display: none"
+            >
+              <div class="card-body p-4">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
+                  <h3 class="h5 fw-bold mb-0">Booking summary</h3>
+                  <span class="badge text-bg-primary rounded-pill">Live</span>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                  <div
+                    class="list-group-item d-flex justify-content-between px-0"
+                  >
+                    <span class="text-secondary">From</span
+                    ><strong id="summaryFrom">-</strong>
+                  </div>
+                  <div
+                    class="list-group-item d-flex justify-content-between px-0"
+                  >
+                    <span class="text-secondary">To</span
+                    ><strong id="summaryTo">-</strong>
+                  </div>
+                  <div
+                    class="list-group-item d-flex justify-content-between px-0"
+                  >
+                    <span class="text-secondary">Date</span
+                    ><strong id="summaryDate">-</strong>
+                  </div>
+                  <div
+                    class="list-group-item d-flex justify-content-between px-0"
+                  >
+                    <span class="text-secondary">Flight</span
+                    ><strong id="summaryFlight">Not selected</strong>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center border-top pt-3 mb-3"
+                >
+                  <span class="text-secondary">Total</span>
+                  <span class="fs-3 fw-bold text-primary"
+                    >$<span id="summaryPrice">0</span></span
+                  >
+                </div>
+                <button
+                  class="btn btn-primary btn-lg w-100"
+                  id="checkoutBtn"
+                  onclick="proceedToBooking()"
+                  style="display: none"
+                >
+                  Proceed to booking
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white-50 pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <h5 class="text-white fw-bold">MLM Flights</h5>
+            <p class="small mb-0">Your trusted flight reservation partner.</p>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Quick Links</h6>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a class="text-white-50" href="index.html">Home</a></li>
+              <li>
+                <a class="text-white-50" href="search.html">Search Flights</a>
+              </li>
+              <li><a class="text-white-50" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Support</h6>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li>
+                <a class="text-white-50" href="contact.html">Help Center</a>
+              </li>
+              <li><a class="text-white-50" href="contact.html">FAQ</a></li>
+              <li>
+                <a class="text-white-50" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white fw-semibold">Follow Us</h6>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="text-white-50" href="#">Facebook</a>
+              <a class="text-white-50" href="#">Twitter</a>
+              <a class="text-white-50" href="#">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary my-4" />
+        <p class="small text-center mb-0">
+          &copy; 2026 MLM Flights Airlines. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const activeParams = getActiveSearchParams()
+
+        setTimeout(function () {
+          if (activeParams.from) {
+            const fromSelect = document.getElementById("fromCity")
+            if (fromSelect) fromSelect.value = activeParams.from
+          }
+
+          if (activeParams.to) {
+            const toSelect = document.getElementById("toCity")
+            if (toSelect) toSelect.value = activeParams.to
+          }
+
+          if (activeParams.date) {
+            const dateInput = document.getElementById("travelDate")
+            if (dateInput) dateInput.value = activeParams.date
+          }
+
+          if (activeParams.from && activeParams.to && activeParams.date) {
+            displayResults()
+          }
+        }, 100)
+      })
+    </script>
+  </body>
+</html>
