@@ -62,3 +62,7 @@ If you are using VS Code, the easiest option is to open index.html with Live Ser
 
 - Search state is stored in sessionStorage so users can move between pages without losing context.
 - The booking flow is a front-end demo and does not submit to a real payment gateway.
+
+## Screenshot
+
+![App Image](https://imgur.com/a/8h4EyIu)
