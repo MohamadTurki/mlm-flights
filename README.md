@@ -65,4 +65,4 @@ If you are using VS Code, the easiest option is to open index.html with Live Ser
 
 ## Screenshot
 
-![App Image](https://imgur.com/a/8h4EyIu)
+![App Image](https://i.imgur.com/ES0BJYt.jpeg)
